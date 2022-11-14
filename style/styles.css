@@ -1,0 +1,760 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #24252a;
+  overflow-x: hidden;
+}
+
+p,
+li,
+a,
+button,
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  color: white;
+  text-decoration: none;
+}
+
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.logo {
+  margin-right: auto;
+  cursor: pointer;
+}
+
+nav {
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+nav li a {
+  font-size: 10px;
+  transition: all 0.3 ease 0s;
+}
+
+nav li a:hover {
+  color: #0088a9;
+}
+
+button {
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3 ease 0s;
+}
+
+button:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+/* Hamburger */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -5px;
+  top: -3px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: #55acee;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+/* Hamburger Animasi */
+
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  background-color: white;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+  background-color: white;
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+/* End of Hamburger */
+
+.banner {
+  background-size: cover;
+  min-height: 80vh;
+  position: relative;
+  color: rgb(255, 255, 255);
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+#judulbanner {
+  text-shadow: 2px 2px 5px black;
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
+  user-select: none;
+}
+
+.fotosatu li {
+  margin-left: 260px;
+  list-style-type: none;
+  text-align: center;
+  font-size: 15px;
+}
+
+.fotosatu {
+  margin-top: 60px;
+  float: left;
+}
+
+.bnw {
+  margin-left: 250px;
+}
+
+.fotosatu p {
+  margin-left: 260px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.fotosatu a {
+  text-decoration: underline;
+  font-size: 15px;
+}
+
+.mafia {
+  width: 28.75%;
+  margin-top: 130px;
+  margin-left: 120px;
+}
+
+.fotodua p {
+  font-size: 15px;
+  margin-left: 560px;
+  text-align: center;
+}
+
+.fotodua li {
+  list-style-type: none;
+  margin-left: 560px;
+  text-align: center;
+}
+
+.fotodua a {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.fototiga {
+  float: left;
+  width: 56%;
+}
+
+.ninty {
+  margin-top: 25px;
+  margin-left: 250px;
+  width: 50.8%;
+}
+
+.fototiga li {
+  margin-left: 133px;
+  list-style-type: none;
+  text-align: center;
+}
+
+.fototiga p {
+  margin-left: 133px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.fototiga a {
+  font-size: 15px;
+  text-decoration: underline;
+}
+
+.summer {
+  margin-top: 100px;
+  width: 29%;
+  margin-right: 50px;
+}
+
+.fotoempat p {
+  margin-left: 560px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.fotoempat li {
+  list-style-type: none;
+  text-align: center;
+  margin-left: 560px;
+}
+
+.fotoempat a {
+  font-size: 15px;
+  text-decoration: underline;
+}
+
+.footer {
+  display: flex;
+  margin-top: 115px;
+  background-color: black;
+}
+
+.material-symbols-outlined {
+  margin-top: 10px;
+  color: white;
+  font-variation-settings: "FILL" 0, "wght" 320, "GRAD" 0, "opsz" 48;
+}
+
+.lokasi {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-left: 40px;
+  font-size: 20px;
+  text-align: left;
+}
+
+.lokasi p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.telpon {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  margin-left: 40px;
+  font-size: 20px;
+  text-align: left;
+}
+
+.telpon p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.mail {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  margin-left: 40px;
+  font-size: 20px;
+  text-align: left;
+}
+
+.mail p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.about h2 {
+  font-size: 15px;
+  margin-left: 775px;
+  margin-top: 20px;
+}
+
+.about p {
+  justify-content: center;
+  font-size: 10px;
+  margin-left: 645px;
+  margin-right: 150px;
+}
+
+.social {
+  margin-left: 640px;
+}
+
+.fa {
+  padding: 15px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 20px 2px;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.aboutus {
+  background-color: white;
+  min-height: 250px;
+  margin-top: 2px;
+  text-align: center;
+  user-select: none;
+}
+
+#judulabout {
+  padding-top: 50px;
+}
+
+.tentang {
+  margin-top: 10px;
+  display: flex;
+}
+
+#tentangdua {
+  color: black;
+  justify-content: right;
+  margin-right: 140px;
+}
+
+#tentangsatu {
+  color: black;
+  justify-content: left;
+  margin-left: 140px;
+}
+
+.founder h1 {
+  color: white;
+  text-align: center;
+}
+
+.teksfounder {
+  margin-top: 100px;
+}
+
+#thefounder {
+  margin-top: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+}
+
+.fototeam {
+  display: flex;
+}
+
+.fototeam img {
+  width: 20%;
+  height: 10%;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+}
+
+.teksteam {
+  display: flex;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team h1,
+.team p {
+  color: black;
+}
+
+.team {
+  min-height: 500px;
+  padding-top: 50px;
+  background-color: white;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.form {
+  width: 40%;
+  padding: 33px;
+  background-color: rgb(255, 255, 255, 0.5);
+  margin: auto auto;
+}
+
+.form .inputbox {
+  position: relative;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.form .inputbox input,
+.form .inputbox textarea {
+  background-color: #24252a;
+  color: white;
+  width: 100%;
+  padding: 5px;
+  font-size: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 1%;
+  border-bottom: 5px solid #333;
+  outline: none;
+  resize: none;
+}
+
+.form .inputbox span {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: white;
+}
+
+.form .inputbox input:focus ~ span,
+.form .inputbox input:valid ~ span,
+.form .inputbox textarea:focus ~ span,
+.form .inputbox textarea:valid ~ span {
+  opacity: 100%;
+  color: white;
+  font-size: 15px;
+  transform: translateY(-20px);
+}
+
+@media (max-width: 768px) {
+  .banner {
+    min-height: 40vh;
+  }
+
+  #judulbanner {
+    font-size: 35px;
+  }
+
+  .bnw {
+    border: solid white;
+    border-radius: 5%;
+    margin-left: 60px;
+    width: 80%;
+  }
+
+  .fotosatu p {
+    margin-left: 45px;
+    font-size: 15px;
+  }
+
+  .fotosatu li {
+    margin-left: 50px;
+  }
+
+  .mafia {
+    border: solid white;
+    border-radius: 5%;
+    width: 75%;
+    margin-top: 100px;
+    margin-left: 60px;
+  }
+
+  .fotodua p {
+    font-size: 15px;
+    margin-left: 10px;
+    text-align: center;
+  }
+
+  .fotodua li {
+    list-style-type: none;
+    margin-left: 8px;
+    text-align: center;
+  }
+
+  .fotodua a {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 14px;
+  }
+
+  .fototiga {
+    float: left;
+    width: 56%;
+  }
+
+  .ninty {
+    margin-top: 100px;
+    margin-left: 60px;
+    width: 135%;
+    border: solid white;
+    border-radius: 5%;
+  }
+
+  .fototiga li {
+    list-style-type: none;
+    margin-left: 204px;
+  }
+
+  .fototiga p {
+    margin-left: 215px;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .fototiga a {
+    font-size: 15px;
+    text-decoration: underline;
+  }
+
+  .summer {
+    margin-top: 100px;
+    width: 75%;
+    margin-left: 60px;
+    margin-right: 50px;
+    border: solid white;
+    border-radius: 5%;
+  }
+
+  .fotoempat p {
+    margin-left: 5px;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .fotoempat li {
+    list-style-type: none;
+    text-align: center;
+    margin-left: 5px;
+  }
+
+  .fotoempat a {
+    font-size: 15px;
+    text-decoration: underline;
+  }
+
+  .footer {
+    display: block;
+    margin-top: 115px;
+    background-color: black;
+    min-height: 40vh;
+  }
+
+  .material-symbols-outlined {
+    margin-top: 20px;
+    color: white;
+    font-variation-settings: "FILL" 0, "wght" 320, "GRAD" 0, "opsz" 48;
+  }
+
+  .lokasi {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    margin-left: 40px;
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .lokasi p {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  .telpon {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    margin-left: 40px;
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .telpon p {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  .mail {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    margin-left: 40px;
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .mail p {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  .about h2 {
+    font-size: 15px;
+    margin-left: 45px;
+    margin-top: 29px;
+  }
+
+  .about p {
+    justify-content: center;
+    font-size: 10px;
+    margin-left: 45px;
+  }
+
+  .social {
+    margin-left: 40px;
+  }
+
+  #contactform {
+    margin-top: 50px;
+    font-size: 25px;
+  }
+
+  .form {
+    width: 90%;
+    padding: 33px;
+  }
+
+  .submitform {
+    font-size: 15px;
+    margin-left: 135px;
+    margin-top: 15px;
+  }
+  .aboutus {
+    background-color: white;
+    min-height: 330px;
+    margin-top: 2px;
+    text-align: center;
+    user-select: none;
+  }
+
+  #judulabout {
+    padding-top: 5px;
+  }
+
+  .tentang {
+    display: contents;
+  }
+
+  #tentangdua {
+    color: black;
+    justify-content: left;
+    margin-top: 10px;
+    margin-left: 140px;
+    text-align: center;
+  }
+
+  #tentangsatu {
+    color: black;
+    justify-content: left;
+    margin-left: 0px;
+  }
+
+  .founder h1 {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .teksfounder {
+    margin-top: 100px;
+  }
+
+  #thefounder {
+    margin-top: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    width: 50%;
+  }
+
+  .fototeam {
+    display: flex;
+  }
+
+  .fototeam img {
+    width: 20%;
+    height: 10%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+  }
+
+  #teksteam {
+    display: flex;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #teksteam h1 {
+    display: flex;
+    font-size: 20px;
+  }
+
+  .team h1,
+  .team p {
+    font-size: 30px;
+    color: black;
+  }
+
+  .team {
+    min-height: 500px;
+    padding-top: 50px;
+    background-color: white;
+    margin-top: 100px;
+    text-align: center;
+  }
+}
